@@ -36,6 +36,7 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.List;
+import android.util.Log;
 
 public class AddSmsActivity extends Activity {
 

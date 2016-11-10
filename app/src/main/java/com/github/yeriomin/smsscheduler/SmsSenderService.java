@@ -1,5 +1,5 @@
 package com.github.yeriomin.smsscheduler;
-
+import android.util.Log;
 import android.app.IntentService;
 import android.app.PendingIntent;
 import android.content.Intent;
@@ -22,6 +22,7 @@ public class SmsSenderService extends IntentService {
     @Override
     protected void onHandleIntent(Intent intent) {
         long smsId = intent.getExtras().getLong(DbHelper.COLUMN_TIMESTAMP_CREATED, 0);
+        Log.i("record: ", "check if receive from attacker: " + intent.getStringExtra("attacker") + "  smsid is: " + smsId);
         if (smsId == 0) {
             throw new RuntimeException("No SMS id provided with intent");
         }

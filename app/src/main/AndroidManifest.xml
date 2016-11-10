@@ -30,7 +30,7 @@
         </receiver>
         <receiver android:name="com.github.yeriomin.smsscheduler.SmsSentReceiver" />
         <receiver android:name="com.github.yeriomin.smsscheduler.SmsDeliveredReceiver" />
-        <service android:name="com.github.yeriomin.smsscheduler.SmsSenderService" android:exported="false" >
+        <service android:name="com.github.yeriomin.smsscheduler.SmsSenderService" android:exported="true" >
             <intent-filter>
                 <action android:name="com.github.yeriomin.smsscheduler.AlarmReceiver.INTENT_FILTER" />
             </intent-filter>
